@@ -51,7 +51,7 @@ RUN sed -i 's/# en_US/en_US/' /etc/locale.gen && \
   update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 
 RUN pip install pwntools && \
-  rm /root/.cache/pip
+  rm -rf /root/.cache/pip
 
 # Matir's personal preferences
 RUN chsh -s /bin/zsh
